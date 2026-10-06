@@ -17,3 +17,21 @@ botonesAcordeon.forEach(boton => {
         panel.style.display = panel.style.display === "block" ? "none" : "block";
     });
 });
+// LIGHTBOX: ampliar imágenes al hacer clic
+const modalImagen = document.getElementById("modal-imagen-ampliada");
+const imagenAmpliada = document.getElementById("imagen-ampliada-contenido");
+
+document.querySelectorAll(".img-ampliable").forEach(img => {
+    img.addEventListener("click", () => {
+        imagenAmpliada.src = img.src;
+        imagenAmpliada.alt = img.alt;
+        modalImagen.style.display = "flex";
+    });
+});
+
+if (modalImagen) {
+    modalImagen.addEventListener("click", () => {
+        modalImagen.style.display = "none";
+    });
+}
+
