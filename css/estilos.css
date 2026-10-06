@@ -230,3 +230,45 @@ section {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+/* LIGHTBOX: ampliar imágenes al hacer clic */
+.img-ampliable {
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
+}
+
+.img-ampliable:hover {
+    opacity: 0.85;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+}
+
+#modal-imagen-ampliada {
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: zoom-out;
+}
+
+#imagen-ampliada-contenido {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 6px;
+}
+
+.modal-cerrar-imagen {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
